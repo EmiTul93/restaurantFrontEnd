@@ -7,29 +7,11 @@
     <meta name="description" content="Scopri il nostro menu con specialità italiane e ciociare. Antipasti, primi, secondi, dolci e vini selezionati.">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/pages.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#ef4444',
-                        secondary: '#f97316',
-                        dark: '#1a1a1a',
-                        light: '#f5f5f5',
-                        accent: '#22c55e'
-                    },
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['"Open Sans"', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="css/tailwind-config.js"></script>
 </head>
 <body class="bg-dark text-light font-sans pt-20">
     <custom-navbar></custom-navbar>
@@ -428,6 +410,7 @@
     <!-- Scripts -->
     <script src="components/navbar.js"></script>
     <script src="components/footer.js"></script>
+    <script src="js/utils.js"></script>
     <script src="script.js"></script>
     <script>
         feather.replace();

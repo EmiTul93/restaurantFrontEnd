@@ -7,29 +7,11 @@
     <meta name="description" content="Contattaci per prenotazioni, informazioni o qualsiasi richiesta. Siamo a tua disposizione.">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/pages.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#ef4444',
-                        secondary: '#f97316',
-                        dark: '#1a1a1a',
-                        light: '#f5f5f5',
-                        accent: '#22c55e'
-                    },
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['"Open Sans"', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="css/tailwind-config.js"></script>
 </head>
 <body class="bg-dark text-light font-sans pt-20">
     <custom-navbar></custom-navbar>
@@ -153,3 +135,33 @@
     </section>
 
     <!-- Map -->
+    <section class="py-20 bg-dark/80">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-serif font-bold mb-8 text-center">Dove siamo</h2>
+            <div class="rounded-xl overflow-hidden shadow-2xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95309.19916121823!2d13.351249699999999!3d41.6403889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13318f3c1e9de0e1%3A0x2065c5b74a2e9a0e!2sFrosinone%2C%20FR!5e0!3m2!1sit!2sit!4v1234567890" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <custom-footer></custom-footer>
+
+    <!-- Scripts -->
+    <script src="components/navbar.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+
+        // Handle contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            if(validateForm(this)) {
+                alert('Messaggio inviato con successo! Ti risponderemo al più presto.');
+                this.reset();
+            }
+        });
+    </script>
+</body>
+</html>
