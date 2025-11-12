@@ -6,18 +6,12 @@
     <title>Prenotazioni - Dal Ciociaro</title>
     <meta name="description" content="Prenota il tuo tavolo al ristorante Dal Ciociaro. Cucina tradizionale italiana nel cuore della Ciociaria.">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Feather Icons -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
-    
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="css/indexStyle.css">
-    <link rel="stylesheet" href="css/prenotazioniStyle.css">
+    <script src="css/tailwind-config.js"></script>
 </head>
 <body class="reservation-page">
     <!-- Navbar -->
@@ -157,24 +151,13 @@
     <!-- Scripts -->
     <script src="components/navbar.js"></script>
     <script src="components/footer.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="script.js"></script>
     <script>
         feather.replace();
 
         // Set minimum date to today
         document.getElementById('date').min = new Date().toISOString().split('T')[0];
-
-        // Form validation function (simple version)
-        function validateForm(form) {
-            const inputs = form.querySelectorAll('[required]');
-            for (let input of inputs) {
-                if (!input.value.trim()) {
-                    alert('Per favore compila tutti i campi obbligatori');
-                    return false;
-                }
-            }
-            return true;
-        }
 
         // Handle form submission
         document.getElementById('reservation-form').addEventListener('submit', function(e) {

@@ -6,19 +6,14 @@
     <title>Dal Ciociaro - Cucina Tradizionale Italiana</title>
     <meta name="description" content="Ristorante italiano tradizionale con specialità ciociare. Ambiente rustico e accogliente con piatti preparati con ingredienti locali.">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Feather Icons -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
-    
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="css/indexStyle.css">
-<body>
-    <!-- Navbar -->
+    <script src="css/tailwind-config.js"></script>
+</head>
+<body class="bg-dark text-light font-sans">
     <custom-navbar></custom-navbar>
 
     <!-- Hero Section -->
@@ -252,12 +247,11 @@
     <!-- Scripts -->
     <script src="components/navbar.js"></script>
     <script src="components/footer.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="script.js"></script>
     <script>
         // Initialize Feather Icons
         feather.replace();
-        
-        // Set hero background
         document.getElementById('hero').style.backgroundImage = "url('http://static.photos/restaurant/1200x630/1')";
     </script>
 </body>
