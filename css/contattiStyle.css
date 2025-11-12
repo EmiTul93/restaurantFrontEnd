@@ -1,0 +1,241 @@
+/* Contact Page Specific Styles */
+
+/* Body adjustment for navbar */
+.contact-page {
+  padding-top: 5rem;
+}
+
+/* Contact Header */
+.contact-header {
+  position: relative;
+  padding: 5rem 0;
+  background-image: url('http://static.photos/restaurant/1200x630/3');
+  background-size: cover;
+  background-position: center;
+}
+
+.contact-header-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.contact-header-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.contact-header-title {
+  font-family: var(--font-serif);
+  font-size: 3.75rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-light);
+}
+
+.contact-header-text {
+  font-size: 1.25rem;
+  max-width: 42rem;
+  margin: 0 auto;
+  color: var(--color-light);
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 5rem 0;
+  background-color: rgba(24, 24, 27, 0.9);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+/* Contact Info */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+}
+
+.info-item-icon {
+  background-color: rgba(239, 68, 68, 0.2);
+  padding: 0.75rem;
+  border-radius: 50%;
+  margin-right: var(--spacing-md);
+  flex-shrink: 0;
+}
+
+.info-item-icon i {
+  color: var(--color-primary);
+  width: 24px;
+  height: 24px;
+}
+
+.info-item-content {
+  flex: 1;
+}
+
+.info-item-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--color-light);
+}
+
+.info-item-text {
+  color: rgba(250, 250, 250, 0.8);
+  font-size: 1rem;
+}
+
+/* Social Section */
+.social-section {
+  margin-top: 3rem;
+}
+
+.social-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-light);
+}
+
+.social-links {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.social-link {
+  background-color: rgba(39, 39, 42, 0.7);
+  padding: 0.75rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-base);
+  color: var(--color-light);
+}
+
+.social-link:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.social-link i {
+  width: 20px;
+  height: 20px;
+}
+
+/* Contact Form */
+.contact-form-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--color-light);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: rgba(39, 39, 42, 0.7);
+  border: 1px solid rgba(39, 39, 42, 0.3);
+  border-radius: var(--radius-md);
+  color: var(--color-light);
+  font-family: var(--font-sans);
+  transition: all var(--transition-base);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.form-input::placeholder {
+  color: rgba(250, 250, 250, 0.4);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 700;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+  font-size: 1rem;
+}
+
+.btn-submit:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Map Section */
+.map-section {
+  padding: 5rem 0;
+  background-color: rgba(24, 24, 27, 0.8);
+}
+
+.map-container {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  margin-top: var(--spacing-lg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-page {
+    padding-top: 0;
+  }
+
+  .contact-header-title {
+    font-size: 2.25rem;
+  }
+  
+  .contact-header-text {
+    font-size: 1.125rem;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .social-links {
+    justify-content: flex-start;
+  }
+}

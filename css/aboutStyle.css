@@ -1,0 +1,218 @@
+/* About Page Specific Styles */
+
+/* Body adjustment for navbar */
+.about-page {
+  padding-top: 5rem;
+}
+
+/* About Header */
+.about-header {
+  position: relative;
+  padding: 5rem 0;
+  background-image: url('http://static.photos/restaurant/1200x630/2');
+  background-size: cover;
+  background-position: center;
+}
+
+.about-header-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.about-header-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.about-header-title {
+  font-family: var(--font-serif);
+  font-size: 3.75rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-light);
+}
+
+.about-header-text {
+  font-size: 1.25rem;
+  max-width: 42rem;
+  margin: 0 auto;
+  color: var(--color-light);
+}
+
+/* Our Story Section */
+.our-story {
+  padding: 5rem 0;
+  background-color: rgba(24, 24, 27, 0.9);
+}
+
+.story-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+}
+
+.story-image {
+  flex: 1;
+}
+
+.story-image img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+}
+
+.story-text {
+  flex: 1;
+}
+
+.story-paragraph {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-light);
+  line-height: 1.8;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+  padding: 5rem 0;
+  background-color: rgba(24, 24, 27, 0.8);
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.philosophy-card {
+  background-color: rgba(39, 39, 42, 0.7);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.philosophy-icon {
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(239, 68, 68, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.philosophy-icon i {
+  color: var(--color-primary);
+  width: 32px;
+  height: 32px;
+}
+
+.philosophy-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-light);
+}
+
+.philosophy-text {
+  color: rgba(250, 250, 250, 0.8);
+  line-height: 1.6;
+}
+
+/* Team Section */
+.team-section {
+  padding: 5rem 0;
+  background-color: rgba(24, 24, 27, 0.9);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.team-card {
+  background-color: rgba(39, 39, 42, 0.7);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  text-align: center;
+}
+
+.team-image {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+}
+
+.team-info {
+  padding: 1.5rem;
+}
+
+.team-name {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-light);
+}
+
+.team-role {
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.team-description {
+  color: rgba(250, 250, 250, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* About CTA Section */
+.about-cta {
+  padding: 4rem 0;
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.about-cta-text {
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin: 0 auto var(--spacing-lg);
+  color: var(--color-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 0;
+  }
+
+  .about-header-title {
+    font-size: 2.25rem;
+  }
+  
+  .about-header-text {
+    font-size: 1.125rem;
+  }
+  
+  .story-content {
+    flex-direction: column;
+  }
+  
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .story-paragraph {
+    font-size: 1rem;
+  }
+}

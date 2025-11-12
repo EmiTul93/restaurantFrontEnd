@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it" class="scroll-smooth">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,124 +13,123 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="css/tailwind-config.js"></script>
 </head>
-<body class="bg-dark text-light font-sans pt-20">
+<body class="about-page">
+    <!-- Navbar -->
     <custom-navbar></custom-navbar>
 
     <!-- About Header -->
-    <section class="relative py-20 bg-cover bg-center" style="background-image: url('http://static.photos/restaurant/1200x630/2')">
-        <div class="absolute inset-0 bg-black/60"></div>
-        <div class="container relative z-10 mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-6xl font-serif font-bold mb-4">Chi Siamo</h1>
-            <p class="text-xl max-w-2xl mx-auto">La nostra storia e la passione per la cucina tradizionale</p>
+    <section class="about-header">
+        <div class="about-header-overlay"></div>
+        <div class="container about-header-content">
+            <h1 class="about-header-title">Chi Siamo</h1>
+            <p class="about-header-text">La nostra storia e la passione per la cucina tradizionale</p>
         </div>
     </section>
 
     <!-- Our Story -->
-    <section class="py-20 bg-dark/90">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
-                    <img src="http://static.photos/people/640x360/4" alt="Famiglia proprietaria" class="rounded-xl shadow-2xl">
+    <section class="our-story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-image">
+                    <img src="http://static.photos/people/640x360/4" alt="Famiglia proprietaria">
                 </div>
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">La nostra storia</h2>
-                    <p class="text-lg mb-6">Fondato nel 1985 da Giovanni e Maria Rossi, Dal Ciociaro nasce dalla passione per la cucina tradizionale italiana e in particolare ciociara.</p>
-                    <p class="text-lg mb-6">Da oltre 35 anni portiamo avanti la tradizione familiare, utilizzando solo ingredienti locali e stagionali, seguendo ricette tramandate di generazione in generazione.</p>
-                    <p class="text-lg">Oggi il ristorante è gestito dai figli Marco e Anna, che con lo stesso amore per la cucina hanno modernizzato alcuni aspetti mantenendo intatta l'autenticità dei sapori.</p>
+                <div class="story-text">
+                    <h2 class="section-title">La nostra storia</h2>
+                    <p class="story-paragraph">Fondato nel 1985 da Giovanni e Maria Rossi, Dal Ciociaro nasce dalla passione per la cucina tradizionale italiana e in particolare ciociara.</p>
+                    <p class="story-paragraph">Da oltre 35 anni portiamo avanti la tradizione familiare, utilizzando solo ingredienti locali e stagionali, seguendo ricette tramandate di generazione in generazione.</p>
+                    <p class="story-paragraph">Oggi il ristorante è gestito dai figli Marco e Anna, che con lo stesso amore per la cucina hanno modernizzato alcuni aspetti mantenendo intatta l'autenticità dei sapori.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Our Philosophy -->
-    <section class="py-20 bg-dark/80">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">La nostra filosofia</h2>
-                <p class="text-lg max-w-2xl mx-auto">I principi che guidano il nostro lavoro ogni giorno</p>
+    <section class="philosophy-section">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="section-title">La nostra filosofia</h2>
+                <p class="section-subtitle">I principi che guidano il nostro lavoro ogni giorno</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-dark/70 p-8 rounded-xl text-center">
-                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i data-feather="heart" class="text-primary w-8 h-8"></i>
+            <div class="philosophy-grid">
+                <article class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <i data-feather="heart"></i>
                     </div>
-                    <h3 class="text-xl font-serif font-bold mb-4">Passione</h3>
-                    <p class="text-light/80">Mettiamo amore in ogni piatto, curando ogni dettaglio per offrire un'esperienza culinaria memorabile.</p>
-                </div>
+                    <h3 class="philosophy-title">Passione</h3>
+                    <p class="philosophy-text">Mettiamo amore in ogni piatto, curando ogni dettaglio per offrire un'esperienza culinaria memorabile.</p>
+                </article>
                 
-                <div class="bg-dark/70 p-8 rounded-xl text-center">
-                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i data-feather="leaf" class="text-primary w-8 h-8"></i>
+                <article class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <i data-feather="leaf"></i>
                     </div>
-                    <h3 class="text-xl font-serif font-bold mb-4">Qualità</h3>
-                    <p class="text-light/80">Utilizziamo solo ingredienti freschi e locali, selezionati con cura dai migliori produttori della zona.</p>
-                </div>
+                    <h3 class="philosophy-title">Qualità</h3>
+                    <p class="philosophy-text">Utilizziamo solo ingredienti freschi e locali, selezionati con cura dai migliori produttori della zona.</p>
+                </article>
                 
-                <div class="bg-dark/70 p-8 rounded-xl text-center">
-                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i data-feather="book" class="text-primary w-8 h-8"></i>
+                <article class="philosophy-card">
+                    <div class="philosophy-icon">
+                        <i data-feather="book"></i>
                     </div>
-                    <h3 class="text-xl font-serif font-bold mb-4">Tradizione</h3>
-                    <p class="text-light/80">Rispettiamo le ricette originali, mantenendo vivi i sapori autentici della cucina italiana e ciociara.</p>
-                </div>
+                    <h3 class="philosophy-title">Tradizione</h3>
+                    <p class="philosophy-text">Rispettiamo le ricette originali, mantenendo vivi i sapori autentici della cucina italiana e ciociara.</p>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- Team -->
-    <section class="py-20 bg-dark/90">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">Il nostro team</h2>
-                <p class="text-lg max-w-2xl mx-auto">I volti che ogni giorno rendono speciale Dal Ciociaro</p>
+    <section class="team-section">
+        <div class="container">
+            <div class="text-center mb-8">
+                <h2 class="section-title">Il nostro team</h2>
+                <p class="section-subtitle">I volti che ogni giorno rendono speciale Dal Ciociaro</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-dark/70 rounded-xl overflow-hidden text-center">
-                    <img src="Img/chef-img.png" alt="chef" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-serif font-bold mb-2">Marco Rossellini</h3>
-                        <p class="text-secondary mb-2">Chef e Proprietario</p>
-                        <p class="text-light/80">Con oltre 20 anni di esperienza, Marco è il cuore della nostra cucina.</p>
+            <div class="team-grid">
+                <article class="team-card">
+                    <img src="Img/chef-img.png" alt="Chef" class="team-image">
+                    <div class="team-info">
+                        <h3 class="team-name">Marco Rossellini</h3>
+                        <p class="team-role">Chef e Proprietario</p>
+                        <p class="team-description">Con oltre 20 anni di esperienza, Marco è il cuore della nostra cucina.</p>
                     </div>
-                </div>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl overflow-hidden text-center">
-                    <img src="Img/gestore-img.png" alt="Manager" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-serif font-bold mb-2">Anno Alfred Pangocciolé</h3>
-                        <p class="text-secondary mb-2">Sala e Gestione</p>
-                        <p class="text-light/80">Anno Alfred si occupa della sala e dell'accoglienza, curando ogni dettaglio.</p>
+                <article class="team-card">
+                    <img src="Img/gestore-img.png" alt="Manager" class="team-image">
+                    <div class="team-info">
+                        <h3 class="team-name">Anno Alfred Pangocciolé</h3>
+                        <p class="team-role">Sala e Gestione</p>
+                        <p class="team-description">Anno Alfred si occupa della sala e dell'accoglienza, curando ogni dettaglio.</p>
                     </div>
-                </div>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl overflow-hidden text-center">
-                    <img src="Img/souchef-img.png" alt="Luigi Amiltone" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-serif font-bold mb-2">Luigi Amiltone</h3>
-                        <p class="text-secondary mb-2">Sous Chef</p>
-                        <p class="text-light/80">Luigi è il nostro esperto di pasta fresca e piatti della tradizione.</p>
+                <article class="team-card">
+                    <img src="Img/souchef-img.png" alt="Sous Chef" class="team-image">
+                    <div class="team-info">
+                        <h3 class="team-name">Luigi Amiltone</h3>
+                        <p class="team-role">Sous Chef</p>
+                        <p class="team-description">Luigi è il nostro esperto di pasta fresca e piatti della tradizione.</p>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 bg-primary/10">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-serif font-bold mb-6">Vieni a trovarci</h2>
-            <p class="text-lg max-w-2xl mx-auto mb-8">Prenota ora per vivere un'esperienza culinaria indimenticabile</p>
-            <a href="/prenotazioni.html" class="inline-block bg-primary hover:bg-red-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300">
-                Prenota ora
-            </a>
+    <section class="about-cta">
+        <div class="container text-center">
+            <h2 class="section-title">Vieni a trovarci</h2>
+            <p class="about-cta-text">Prenota ora per vivere un'esperienza culinaria indimenticabile</p>
+            <a href="/prenotazioni.html" class="btn btn-primary">Prenota ora</a>
         </div>
     </section>
 
+    <!-- Footer -->
     <custom-footer></custom-footer>
 
-    <!-- Scripts -->
     <script src="components/navbar.js"></script>
     <script src="components/footer.js"></script>
     <script src="js/utils.js"></script>

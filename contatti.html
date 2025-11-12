@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it" class="scroll-smooth">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,105 +13,108 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="css/tailwind-config.js"></script>
 </head>
-<body class="bg-dark text-light font-sans pt-20">
+<body class="contact-page">
+    <!-- Navbar -->
     <custom-navbar></custom-navbar>
 
     <!-- Contact Header -->
-    <section class="relative py-20 bg-cover bg-center" style="background-image: url('http://static.photos/restaurant/1200x630/3')">
-        <div class="absolute inset-0 bg-black/60"></div>
-        <div class="container relative z-10 mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-6xl font-serif font-bold mb-4">Contatti</h1>
-            <p class="text-xl max-w-2xl mx-auto">Siamo a tua disposizione per qualsiasi informazione</p>
+    <section class="contact-header">
+        <div class="contact-header-overlay"></div>
+        <div class="container contact-header-content">
+            <h1 class="contact-header-title">Contatti</h1>
+            <p class="contact-header-text">Siamo a tua disposizione per qualsiasi informazione</p>
         </div>
     </section>
 
-    <!-- Contact Info -->
-    <section class="py-20 bg-dark/90">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row gap-12">
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-8">Informazioni</h2>
+    <!-- Contact Info & Form -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2 class="section-title">Informazioni</h2>
                     
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="bg-primary/20 p-3 rounded-full mr-4">
-                                <i data-feather="map-pin" class="text-primary w-6 h-6"></i>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="info-item-icon">
+                                <i data-feather="map-pin"></i>
                             </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-1">Indirizzo</h3>
-                                <p class="text-light/80">Via Roma 123, 03010 Frosinone, Italia</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-primary/20 p-3 rounded-full mr-4">
-                                <i data-feather="phone" class="text-primary w-6 h-6"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-1">Telefono</h3>
-                                <p class="text-light/80">+39 0775 123456</p>
+                            <div class="info-item-content">
+                                <h3 class="info-item-title">Indirizzo</h3>
+                                <p class="info-item-text">Via Roma 123, 03010 Frosinone, Italia</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-start">
-                            <div class="bg-primary/20 p-3 rounded-full mr-4">
-                                <i data-feather="mail" class="text-primary w-6 h-6"></i>
+                        <div class="info-item">
+                            <div class="info-item-icon">
+                                <i data-feather="phone"></i>
                             </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-1">Email</h3>
-                                <p class="text-light/80">info@dalciociaro.com</p>
+                            <div class="info-item-content">
+                                <h3 class="info-item-title">Telefono</h3>
+                                <p class="info-item-text">+39 0775 123456</p>
                             </div>
                         </div>
                         
-                        <div class="flex items-start">
-                            <div class="bg-primary/20 p-3 rounded-full mr-4">
-                                <i data-feather="clock" class="text-primary w-6 h-6"></i>
+                        <div class="info-item">
+                            <div class="info-item-icon">
+                                <i data-feather="mail"></i>
                             </div>
-                            <div>
-                                <h3 class="text-xl font-bold mb-1">Orari</h3>
-                                <p class="text-light/80">Lun-Dom: 12:00 - 15:00 / 19:00 - 23:00</p>
+                            <div class="info-item-content">
+                                <h3 class="info-item-title">Email</h3>
+                                <p class="info-item-text">info@dalciociaro.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-item-icon">
+                                <i data-feather="clock"></i>
+                            </div>
+                            <div class="info-item-content">
+                                <h3 class="info-item-title">Orari</h3>
+                                <p class="info-item-text">Lun-Dom: 12:00 - 15:00 / 19:00 - 23:00</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="mt-12">
-                        <h3 class="text-xl font-bold mb-4">Seguici sui social</h3>
-                        <div class="flex space-x-4">
-                            <a href="#" class="bg-dark/70 hover:bg-primary/10 p-3 rounded-full transition-colors duration-300">
-                                <i data-feather="facebook" class="w-5 h-5"></i>
+                    <div class="social-section">
+                        <h3 class="social-title">Seguici sui social</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i data-feather="facebook"></i>
                             </a>
-                            <a href="#" class="bg-dark/70 hover:bg-primary/10 p-3 rounded-full transition-colors duration-300">
-                                <i data-feather="instagram" class="w-5 h-5"></i>
+                            <a href="#" class="social-link">
+                                <i data-feather="instagram"></i>
                             </a>
-                            <a href="#" class="bg-dark/70 hover:bg-primary/10 p-3 rounded-full transition-colors duration-300">
-                                <i data-feather="twitter" class="w-5 h-5"></i>
+                            <a href="#" class="social-link">
+                                <i data-feather="twitter"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-8">Scrivici</h2>
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2 class="section-title">Scrivici</h2>
                     
-                    <form id="contact-form" class="space-y-6">
-                        <div>
-                            <label for="name" class="block mb-2 font-medium">Nome</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-dark/70 border border-dark/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" id="name" name="name" required class="form-input">
                         </div>
                         
-                        <div>
-                            <label for="email" class="block mb-2 font-medium">Email</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-dark/70 border border-dark/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" required class="form-input">
                         </div>
                         
-                        <div>
-                            <label for="phone" class="block mb-2 font-medium">Telefono</label>
-                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 bg-dark/70 border border-dark/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Telefono</label>
+                            <input type="tel" id="phone" name="phone" class="form-input">
                         </div>
                         
-                        <div>
-                            <label for="subject" class="block mb-2 font-medium">Oggetto</label>
-                            <select id="subject" name="subject" required class="w-full px-4 py-3 bg-dark/70 border border-dark/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Oggetto</label>
+                            <select id="subject" name="subject" required class="form-input">
                                 <option value="" disabled selected>Seleziona un oggetto</option>
                                 <option value="prenotazione">Prenotazione</option>
                                 <option value="informazioni">Informazioni</option>
@@ -120,12 +123,12 @@
                             </select>
                         </div>
                         
-                        <div>
-                            <label for="message" class="block mb-2 font-medium">Messaggio</label>
-                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 bg-dark/70 border border-dark/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Messaggio</label>
+                            <textarea id="message" name="message" rows="5" required class="form-input form-textarea"></textarea>
                         </div>
                         
-                        <button type="submit" class="w-full bg-primary hover:bg-red-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300">
+                        <button type="submit" class="btn-submit">
                             Invia messaggio
                         </button>
                     </form>

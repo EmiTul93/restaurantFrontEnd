@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="it" class="scroll-smooth">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,398 +13,331 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="css/tailwind-config.js"></script>
 </head>
-<body class="bg-dark text-light font-sans pt-20">
+<body class="menu-page">
+    <!-- Navbar -->
     <custom-navbar></custom-navbar>
 
     <!-- Menu Header -->
-    <section class="relative py-20 bg-cover bg-center" style="background-image: url('http://static.photos/food/1200x630/6')">
-        <div class="absolute inset-0 bg-black/60"></div>
-        <div class="container relative z-10 mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-6xl font-serif font-bold mb-4">Il nostro menu</h1>
-            <p class="text-xl max-w-2xl mx-auto">Scopri le autentiche specialità della tradizione italiana e ciociara</p>
+    <section class="menu-header">
+        <div class="menu-header-overlay"></div>
+        <div class="container menu-header-content">
+            <h1 class="menu-header-title">Il nostro menu</h1>
+            <p class="menu-header-text">Scopri le autentiche specialità della tradizione italiana e ciociara</p>
         </div>
     </section>
 
     <!-- Menu Navigation -->
-    <div class="sticky top-20 z-50 bg-dark/90 backdrop-blur-sm border-b border-primary/20">
-        <div class="container mx-auto px-4">
-            <div class="flex overflow-x-auto py-4 hide-scrollbar">
-                <a href="#antipasti" class="whitespace-nowrap px-6 py-2 text-light/70 hover:text-white transition-colors duration-300 font-medium">
-                    Antipasti
-                </a>
-                <a href="#primi" class="whitespace-nowrap px-6 py-2 text-light/70 hover:text-white transition-colors duration-300 font-medium">
-                    Primi
-                </a>
-                <a href="#secondi" class="whitespace-nowrap px-6 py-2 text-light/70 hover:text-white transition-colors duration-300 font-medium">
-                    Secondi
-                </a>
-                <a href="#contorni" class="whitespace-nowrap px-6 py-2 text-light/70 hover:text-white transition-colors duration-300 font-medium">
-                    Contorni
-                </a>
-                <a href="#dolci" class="whitespace-nowrap px-6 py-2 text-light/70 hover:text-white transition-colors duration-300 font-medium">
-                    Dolci
-                </a>
-                <a href="#vini" class="whitespace-nowrap px-6 py-2 text-light/70 hover:text-white transition-colors duration-300 font-medium">
-                    Vini
-                </a>
+    <nav class="menu-nav">
+        <div class="container">
+            <div class="menu-nav-links">
+                <a href="#antipasti" class="menu-nav-link">Antipasti</a>
+                <a href="#primi" class="menu-nav-link">Primi</a>
+                <a href="#secondi" class="menu-nav-link">Secondi</a>
+                <a href="#contorni" class="menu-nav-link">Contorni</a>
+                <a href="#dolci" class="menu-nav-link">Dolci</a>
+                <a href="#vini" class="menu-nav-link">Vini</a>
             </div>
         </div>
-    </div>
+    </nav>
 
     <!-- Menu Sections -->
-    <div class="container mx-auto px-4 py-12">
+    <div class="container menu-container">
+        
         <!-- Antipasti -->
-        <section id="antipasti" class="mb-20">
-            <h2 class="text-3xl font-serif font-bold mb-8 flex items-center">
-                <i data-feather="star" class="text-primary mr-4"></i>
+        <section id="antipasti" class="menu-section">
+            <h2 class="menu-section-title">
+                <i data-feather="star"></i>
                 Antipasti
             </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Bruschette al pomodoro</h3>
-                            <p class="text-light/70 mt-1">Pane tostato con pomodoro fresco, aglio e basilico</p>
-                        </div>
-                        <span class="text-primary font-bold">€7.50</span>
+            <div class="menu-grid">
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Bruschette al pomodoro</h3>
+                        <p class="menu-item-desc">Pane tostato con pomodoro fresco, aglio e basilico</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€7.50</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Affettati misti</h3>
-                            <p class="text-light/70 mt-1">Selezione di salumi italiani con pane casereccio</p>
-                        </div>
-                        <span class="text-primary font-bold">€9.00</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Affettati misti</h3>
+                        <p class="menu-item-desc">Selezione di salumi italiani con pane casereccio</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€9.00</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Frittura di fiori di zucca</h3>
-                            <p class="text-light/70 mt-1">Fiori di zucca in pastella fritti al momento</p>
-                        </div>
-                        <span class="text-primary font-bold">€8.50</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Frittura di fiori di zucca</h3>
+                        <p class="menu-item-desc">Fiori di zucca in pastella fritti al momento</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€8.50</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Caprese di bufala</h3>
-                            <p class="text-light/70 mt-1">Mozzarella di bufala, pomodoro e basilico fresco</p>
-                        </div>
-                        <span class="text-primary font-bold">€10.50</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Caprese di bufala</h3>
+                        <p class="menu-item-desc">Mozzarella di bufala, pomodoro e basilico fresco</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€10.50</span>
+                </article>
             </div>
         </section>
         
         <!-- Primi -->
-        <section id="primi" class="mb-20">
-            <h2 class="text-3xl font-serif font-bold mb-8 flex items-center">
-                <i data-feather="coffee" class="text-primary mr-4"></i>
+        <section id="primi" class="menu-section">
+            <h2 class="menu-section-title">
+                <i data-feather="coffee"></i>
                 Primi Piatti
             </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Pasta alla Ciociara</h3>
-                            <p class="text-light/70 mt-1">Pasta fatta in casa con sugo di pomodoro, pancetta e pecorino</p>
-                        </div>
-                        <span class="text-primary font-bold">€12.50</span>
+            <div class="menu-grid">
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Pasta alla Ciociara</h3>
+                        <p class="menu-item-desc">Pasta fatta in casa con sugo di pomodoro, pancetta e pecorino</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€12.50</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Gnocchi al pomodoro e basilico</h3>
-                            <p class="text-light/70 mt-1">Gnocchi di patate con salsa di pomodoro fresco e basilico</p>
-                        </div>
-                        <span class="text-primary font-bold">€11.50</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Gnocchi al pomodoro e basilico</h3>
+                        <p class="menu-item-desc">Gnocchi di patate con salsa di pomodoro fresco e basilico</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€11.50</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Risotto ai funghi porcini</h3>
-                            <p class="text-light/70 mt-1">Risotto cremoso con funghi porcini freschi</p>
-                        </div>
-                        <span class="text-primary font-bold">€13.50</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Risotto ai funghi porcini</h3>
+                        <p class="menu-item-desc">Risotto cremoso con funghi porcini freschi</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€13.50</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Carbonara tradizionale</h3>
-                            <p class="text-light/70 mt-1">Spaghetti con uova, guanciale, pecorino e pepe nero</p>
-                        </div>
-                        <span class="text-primary font-bold">€12.00</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Carbonara tradizionale</h3>
+                        <p class="menu-item-desc">Spaghetti con uova, guanciale, pecorino e pepe nero</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€12.00</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Amatriciana</h3>
-                            <p class="text-light/70 mt-1">Pasta con salsa di pomodoro, guanciale e pecorino</p>
-                        </div>
-                        <span class="text-primary font-bold">€12.00</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Amatriciana</h3>
+                        <p class="menu-item-desc">Pasta con salsa di pomodoro, guanciale e pecorino</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€12.00</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Cacio e pepe</h3>
-                            <p class="text-light/70 mt-1">Pasta con pecorino romano e pepe nero</p>
-                        </div>
-                        <span class="text-primary font-bold">€11.00</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Cacio e pepe</h3>
+                        <p class="menu-item-desc">Pasta con pecorino romano e pepe nero</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€11.00</span>
+                </article>
             </div>
         </section>
         
         <!-- Secondi -->
-        <section id="secondi" class="mb-20">
-            <h2 class="text-3xl font-serif font-bold mb-8 flex items-center">
-                <i data-feather="drumstick" class="text-primary mr-4"></i>
+        <section id="secondi" class="menu-section">
+            <h2 class="menu-section-title">
+                <i data-feather="drumstick"></i>
                 Secondi Piatti
             </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Saltimbocca alla romana</h3>
-                            <p class="text-light/70 mt-1">Fettine di vitella con prosciutto crudo e salvia</p>
-                        </div>
-                        <span class="text-primary font-bold">€16.90</span>
+            <div class="menu-grid">
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Saltimbocca alla romana</h3>
+                        <p class="menu-item-desc">Fettine di vitella con prosciutto crudo e salvia</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€16.90</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Pollo alla cacciatora</h3>
-                            <p class="text-light/70 mt-1">Pollo cotto con pomodoro, olive e spezie</p>
-                        </div>
-                        <span class="text-primary font-bold">€15.50</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Pollo alla cacciatora</h3>
+                        <p class="menu-item-desc">Pollo cotto con pomodoro, olive e spezie</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€15.50</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Abbacchio alla romana</h3>
-                            <p class="text-light/70 mt-1">Agnello cotto con vino bianco, aglio e rosmarino</p>
-                        </div>
-                        <span class="text-primary font-bold">€18.50</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Abbacchio alla romana</h3>
+                        <p class="menu-item-desc">Agnello cotto con vino bianco, aglio e rosmarino</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€18.50</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Filetto di manzo al pepe verde</h3>
-                            <p class="text-light/70 mt-1">Filetto di manzo con salsa al pepe verde</p>
-                        </div>
-                        <span class="text-primary font-bold">€22.00</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Filetto di manzo al pepe verde</h3>
+                        <p class="menu-item-desc">Filetto di manzo con salsa al pepe verde</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€22.00</span>
+                </article>
             </div>
         </section>
         
         <!-- Contorni -->
-        <section id="contorni" class="mb-20">
-            <h2 class="text-3xl font-serif font-bold mb-8 flex items-center">
-                <i data-feather="box" class="text-primary mr-4"></i>
+        <section id="contorni" class="menu-section">
+            <h2 class="menu-section-title">
+                <i data-feather="box"></i>
                 Contorni
             </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Verdure grigliate</h3>
-                            <p class="text-light/70 mt-1">Misto di verdure di stagione grigliate</p>
-                        </div>
-                        <span class="text-primary font-bold">€5.50</span>
+            <div class="menu-grid">
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Verdure grigliate</h3>
+                        <p class="menu-item-desc">Misto di verdure di stagione grigliate</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€5.50</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Patate al forno</h3>
-                            <p class="text-light/70 mt-1">Patate condite con rosmarino e olio extravergine</p>
-                        </div>
-                        <span class="text-primary font-bold">€5.00</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Patate al forno</h3>
+                        <p class="menu-item-desc">Patate condite con rosmarino e olio extravergine</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€5.00</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Insalata mista</h3>
-                            <p class="text-light/70 mt-1">Insalata fresca con pomodorini e olive</p>
-                        </div>
-                        <span class="text-primary font-bold">€4.50</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Insalata mista</h3>
+                        <p class="menu-item-desc">Insalata fresca con pomodorini e olive</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€4.50</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Funghi trifolati</h3>
-                            <p class="text-light/70 mt-1">Funghi freschi saltati in padella con aglio e prezzemolo</p>
-                        </div>
-                        <span class="text-primary font-bold">€6.00</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Funghi trifolati</h3>
+                        <p class="menu-item-desc">Funghi freschi saltati in padella con aglio e prezzemolo</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€6.00</span>
+                </article>
             </div>
         </section>
         
         <!-- Dolci -->
-        <section id="dolci" class="mb-20">
-            <h2 class="text-3xl font-serif font-bold mb-8 flex items-center">
-                <i data-feather="heart" class="text-primary mr-4"></i>
+        <section id="dolci" class="menu-section">
+            <h2 class="menu-section-title">
+                <i data-feather="heart"></i>
                 Dolci
             </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Tiramisù</h3>
-                            <p class="text-light/70 mt-1">Dolce classico con savoiardi, caffè e mascarpone</p>
-                        </div>
-                        <span class="text-primary font-bold">€7.50</span>
+            <div class="menu-grid">
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Tiramisù</h3>
+                        <p class="menu-item-desc">Dolce classico con savoiardi, caffè e mascarpone</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€7.50</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Panna cotta ai frutti di bosco</h3>
-                            <p class="text-light/70 mt-1">Panna cotta con salsa di frutti di bosco freschi</p>
-                        </div>
-                        <span class="text-primary font-bold">€6.50</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Panna cotta ai frutti di bosco</h3>
+                        <p class="menu-item-desc">Panna cotta con salsa di frutti di bosco freschi</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€6.50</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Crostata della nonna</h3>
-                            <p class="text-light/70 mt-1">Crostata con crema pasticcera e pinoli</p>
-                        </div>
-                        <span class="text-primary font-bold">€6.00</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Crostata della nonna</h3>
+                        <p class="menu-item-desc">Crostata con crema pasticcera e pinoli</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€6.00</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Gelato artigianale</h3>
-                            <p class="text-light/70 mt-1">Gelato fatto in casa con gusti stagionali</p>
-                        </div>
-                        <span class="text-primary font-bold">€5.50</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Gelato artigianale</h3>
+                        <p class="menu-item-desc">Gelato fatto in casa con gusti stagionali</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€5.50</span>
+                </article>
             </div>
         </section>
         
         <!-- Vini -->
-        <section id="vini">
-            <h2 class="text-3xl font-serif font-bold mb-8 flex items-center">
-                <i data-feather="glass" class="text-primary mr-4"></i>
+        <section id="vini" class="menu-section">
+            <h2 class="menu-section-title">
+                <i data-feather="glass"></i>
                 Vini
             </h2>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Cesanese del Piglio DOCG</h3>
-                            <p class="text-light/70 mt-1">Rosso corposo con sentori di frutti di bosco</p>
-                        </div>
-                        <span class="text-primary font-bold">€18.00</span>
+            <div class="menu-grid">
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Cesanese del Piglio DOCG</h3>
+                        <p class="menu-item-desc">Rosso corposo con sentori di frutti di bosco</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€18.00</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Frascati Superiore DOCG</h3>
-                            <p class="text-light/70 mt-1">Bianco secco con note floreali e fruttate</p>
-                        </div>
-                        <span class="text-primary font-bold">€16.00</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Frascati Superiore DOCG</h3>
+                        <p class="menu-item-desc">Bianco secco con note floreali e fruttate</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€16.00</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Chianti Classico DOCG</h3>
-                            <p class="text-light/70 mt-1">Rosso equilibrato con tannini eleganti</p>
-                        </div>
-                        <span class="text-primary font-bold">€22.00</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Chianti Classico DOCG</h3>
+                        <p class="menu-item-desc">Rosso equilibrato con tannini eleganti</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€22.00</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Prosecco DOC Brut</h3>
-                            <p class="text-light/70 mt-1">Spumante secco con bollicine fini</p>
-                        </div>
-                        <span class="text-primary font-bold">€20.00</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Prosecco DOC Brut</h3>
+                        <p class="menu-item-desc">Spumante secco con bollicine fini</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€20.00</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Grechetto IGT</h3>
-                            <p class="text-light/70 mt-1">Bianco strutturato con note di frutta a polpa bianca</p>
-                        </div>
-                        <span class="text-primary font-bold">€15.00</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Grechetto IGT</h3>
+                        <p class="menu-item-desc">Bianco strutturato con note di frutta a polpa bianca</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€15.00</span>
+                </article>
                 
-                <div class="bg-dark/70 rounded-xl p-6 hover-scale transition-all duration-300 border border-dark/30 hover:border-primary/20">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h3 class="text-xl font-serif font-bold">Nero d'Avola DOC</h3>
-                            <p class="text-light/70 mt-1">Rosso intenso con sentori di prugna e spezie</p>
-                        </div>
-                        <span class="text-primary font-bold">€17.00</span>
+                <article class="menu-item">
+                    <div class="menu-item-content">
+                        <h3 class="menu-item-title">Nero d'Avola DOC</h3>
+                        <p class="menu-item-desc">Rosso intenso con sentori di prugna e spezie</p>
                     </div>
-                </div>
+                    <span class="menu-item-price">€17.00</span>
+                </article>
             </div>
         </section>
     </div>
 
     <!-- CTA Section -->
-    <section class="py-16 bg-primary/10">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-serif font-bold mb-6">Vuoi prenotare un tavolo?</h2>
-            <p class="text-lg max-w-2xl mx-auto mb-8">Prenota ora per vivere un'esperienza culinaria indimenticabile</p>
-            <a href="/prenotazioni.html" class="inline-block bg-primary hover:bg-red-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300">
-                Prenota ora
-            </a>
+    <section class="menu-cta">
+        <div class="container text-center">
+            <h2 class="section-title">Vuoi prenotare un tavolo?</h2>
+            <p class="menu-cta-text">Prenota ora per vivere un'esperienza culinaria indimenticabile</p>
+            <a href="/prenotazioni.html" class="btn btn-primary">Prenota ora</a>
         </div>
     </section>
 
+    <!-- Footer -->
     <custom-footer></custom-footer>
 
     <!-- Scripts -->
