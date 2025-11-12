@@ -1,9 +1,8 @@
 class CustomNavbar extends HTMLElement {
   connectedCallback() {
-    this.attachShadow({ mode: 'open' });
-    this.shadowRoot.innerHTML = `
+    this.innerHTML = `
       <style>
-        nav {
+        .navbar {
           background: rgba(26, 26, 26, 0.9);
           backdrop-filter: blur(10px);
           padding: 1rem 2rem;
@@ -18,18 +17,26 @@ class CustomNavbar extends HTMLElement {
           border-bottom: 1px solid rgba(239, 68, 68, 0.2);
         }
         
-        .logo {
+        .navbar-logo {
           color: white;
           font-family: 'Playfair Display', serif;
           font-weight: 700;
           font-size: 1.5rem;
           display: flex;
           align-items: center;
+          text-decoration: none;
         }
         
-        .logo-icon {
+        .navbar-logo-icon {
           color: #ef4444;
           margin-right: 0.5rem;
+          width: 24px;
+          height: 24px;
+        }
+        
+        .navbar-desktop {
+          display: flex;
+          align-items: center;
         }
         
         .nav-links {
@@ -67,12 +74,49 @@ class CustomNavbar extends HTMLElement {
           width: 100%;
         }
         
-        .active {
+        .nav-link.active {
           color: white;
         }
         
-        .active::after {
+        .nav-link.active::after {
           width: 100%;
+        }
+        
+        .navbar-actions {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+        }
+        
+        .lang-switcher {
+          background: rgba(255, 255, 255, 0.1);
+          color: white;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          padding: 0.4rem 0.75rem;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 0.9rem;
+        }
+        
+        .lang-switcher:focus {
+          outline: none;
+          border-color: #ef4444;
+        }
+        
+        .reservation-btn {
+          background: #ef4444;
+          color: white;
+          border: none;
+          padding: 0.5rem 1.5rem;
+          border-radius: 9999px;
+          font-weight: 600;
+          transition: background 0.3s ease;
+          text-decoration: none;
+          display: inline-block;
+        }
+        
+        .reservation-btn:hover {
+          background: #dc2626;
         }
         
         .mobile-menu-button {
@@ -81,6 +125,7 @@ class CustomNavbar extends HTMLElement {
           border: none;
           color: white;
           cursor: pointer;
+          padding: 0.5rem;
         }
         
         .mobile-menu {
@@ -122,106 +167,109 @@ class CustomNavbar extends HTMLElement {
           color: #ef4444;
         }
         
-        .lang-switcher {
-          background: rgba(255, 244, 244, 0.74);
-          color:blach;
-          border: 1px solid rgba(255, 255, 255, 0.2);
-          padding: 0.25rem 0.5rem;
-          border-radius: 4px;
-          margin-left: 1rem;
-          cursor: pointer;
-        }
-        
-        .lang-switcher:focus {
-          outline: none;
-          border-color: #ef4444;
-        }
-        
-        .reservation-btn {
-          background: #ef4444;
-          color: white;
-          border: none;
-          padding: 0.5rem 1.5rem;
-          border-radius: 9999px;
-          font-weight: 600;
-          transition: background 0.3s ease;
-          margin-left: 2rem;
-        }
-        
-        .reservation-btn:hover {
-          background: #dc2626;
-        }
-        
         @media (max-width: 1024px) {
-          .nav-desktop {
+          .navbar-desktop {
             display: none;
           }
           
           .mobile-menu-button {
             display: block;
           }
+          
+          .reservation-btn {
+            display: none;
+          }
         }
       </style>
       
-      <nav>
-        <a href="/" class="logo">
-          <i data-feather="home" class="logo-icon"></i>
+      <nav class="navbar">
+        <a href="/index.html" class="navbar-logo">
+          <i data-feather="home" class="navbar-logo-icon"></i>
           Dal Ciociaro
         </a>
         
-        <div class="nav-desktop">
+        <div class="navbar-desktop">
           <ul class="nav-links">
-            <li><a href="/" class="nav-link active">Home</a></li>
-            <li><a href="/menu.html" class="nav-link">Menu</a></li>
-            <li><a href="/prenotazioni.html" class="nav-link">Prenotazioni</a></li>
-            <li><a href="/chi-siamo.html" class="nav-link">Chi Siamo</a></li>
-            <li><a href="/contatti.html" class="nav-link">Contatti</a></li>
+            <li><a href="/index.html" class="nav-link" data-page="index">Home</a></li>
+            <li><a href="/menu.html" class="nav-link" data-page="menu">Menu</a></li>
+            <li><a href="/prenotazioni.html" class="nav-link" data-page="prenotazioni">Prenotazioni</a></li>
+            <li><a href="/chi-siamo.html" class="nav-link" data-page="chi-siamo">Chi Siamo</a></li>
+            <li><a href="/contatti.html" class="nav-link" data-page="contatti">Contatti</a></li>
           </ul>
         </div>
         
-        <div class="flex items-center">
+        <div class="navbar-actions">
           <select id="lang-switcher" class="lang-switcher">
-            <option value="it">IT</option>
-            <option value="en">EN</option>
+            <option value="it">🇮🇹 IT</option>
+            <option value="en">🇬🇧 EN</option>
           </select>
-          <a href="/prenotazioni.html" class="reservation-btn hidden md:block">Prenota</a>
-          <button class="mobile-menu-button" onclick="toggleMobileMenu()">
+          <a href="/prenotazioni.html" class="reservation-btn">Prenota</a>
+          <button class="mobile-menu-button" id="mobile-menu-toggle">
             <i data-feather="menu"></i>
           </button>
         </div>
       </nav>
       
-      <div id="mobile-menu" class="mobile-menu hidden">
+      <div id="mobile-menu" class="mobile-menu">
         <ul class="mobile-links">
-          <li><a href="/" class="mobile-link active">Home</a></li>
-          <li><a href="/menu.html" class="mobile-link">Menu</a></li>
-          <li><a href="/prenotazioni.html" class="mobile-link">Prenotazioni</a></li>
-          <li><a href="/chi-siamo.html" class="mobile-link">Chi Siamo</a></li>
-          <li><a href="/contatti.html" class="mobile-link">Contatti</a></li>
+          <li><a href="/index.html" class="mobile-link" data-page="index">Home</a></li>
+          <li><a href="/menu.html" class="mobile-link" data-page="menu">Menu</a></li>
+          <li><a href="/prenotazioni.html" class="mobile-link" data-page="prenotazioni">Prenotazioni</a></li>
+          <li><a href="/chi-siamo.html" class="mobile-link" data-page="chi-siamo">Chi Siamo</a></li>
+          <li><a href="/contatti.html" class="mobile-link" data-page="contatti">Contatti</a></li>
         </ul>
       </div>
     `;
     
-    // Initialize feather icons
-    if (window.feather) {
-      this.shadowRoot.querySelectorAll('[data-feather]').forEach(el => {
-        feather.replace(el);
-      });
-    }
-    
-    // Highlight active link based on current page
+    // Initialize after DOM is ready
+    setTimeout(() => {
+      // Replace feather icons
+      if (window.feather) {
+        feather.replace();
+      }
+      
+      // Highlight active link based on current page
+      this.setActiveLink();
+      
+      // Setup mobile menu toggle
+      this.setupMobileMenu();
+    }, 0);
+  }
+  
+  setActiveLink() {
     const path = window.location.pathname;
-    const links = this.shadowRoot.querySelectorAll('.nav-link, .mobile-link');
+    const fileName = path.split('/').pop() || 'index.html';
+    const pageName = fileName.replace('.html', '');
+    
+    const links = this.querySelectorAll('.nav-link, .mobile-link');
     
     links.forEach(link => {
-      const linkPath = new URL(link.href).pathname;
       link.classList.remove('active');
+      const linkPage = link.getAttribute('data-page');
       
-      if ((path === '/' && linkPath === '/') || 
-          (path !== '/' && path.includes(linkPath) && linkPath !== '/')) {
+      if (linkPage === pageName || (pageName === '' && linkPage === 'index')) {
         link.classList.add('active');
       }
     });
+  }
+  
+  setupMobileMenu() {
+    const toggleButton = this.querySelector('#mobile-menu-toggle');
+    const mobileMenu = this.querySelector('#mobile-menu');
+    
+    if (toggleButton && mobileMenu) {
+      toggleButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+      });
+      
+      // Close menu when clicking on a link
+      const mobileLinks = this.querySelectorAll('.mobile-link');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+        });
+      });
+    }
   }
 }
 

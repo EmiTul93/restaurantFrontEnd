@@ -15,8 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Mobile menu toggle (will be used by navbar component)
     window.toggleMobileMenu = function() {
-        const menu = document.getElementById('mobile-menu');
-        menu.classList.toggle('hidden');
+        const navbar = document.querySelector('custom-navbar');
+        if (navbar && navbar.shadowRoot) {
+            const menu = navbar.shadowRoot.getElementById('mobile-menu');
+            if (menu) {
+                menu.classList.toggle('open');
+            }
+        }
     };
     
     // Language switcher
@@ -51,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function validateForm(form) {
     let isValid = true;
     const inputs = form.querySelectorAll('input[required], textarea[required], select[required]');
-    
+
     inputs.forEach(input => {
         if(!input.value.trim()) {
             input.classList.add('border-red-500');
@@ -60,7 +65,11 @@ function validateForm(form) {
             input.classList.remove('border-red-500');
         }
     });
-    
+
+    if (!isValid) {
+        alert('Per favore, compila tutti i campi obbligatori.');
+    }
+
     return isValid;
 }
 

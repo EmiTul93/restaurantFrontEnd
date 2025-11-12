@@ -1,76 +1,65 @@
 <!DOCTYPE html>
-<html lang="it" class="scroll-smooth">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prenotazioni - Dal Ciociaro</title>
     <meta name="description" content="Prenota il tuo tavolo al ristorante Dal Ciociaro. Cucina tradizionale italiana nel cuore della Ciociaria.">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#ef4444',
-                        secondary: '#f97316',
-                        dark: '#1a1a1a',
-                        light: '#f5f5f5',
-                        accent: '#22c55e'
-                    },
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['"Open Sans"', 'sans-serif']
-                    }
-                }
-            }
-        }
-    </script>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/indexStyle.css">
+    <link rel="stylesheet" href="css/prenotazioniStyle.css">
 </head>
-<body class="bg-dark text-light font-sans pt-20">
+<body class="reservation-page">
+    <!-- Navbar -->
     <custom-navbar></custom-navbar>
 
     <!-- Reservation Header -->
-    <section class="relative py-20 bg-cover bg-center" style="background-image: url('http://static.photos/restaurant/1200x630/7')">
-        <div class="absolute inset-0 bg-black/60"></div>
-        <div class="container relative z-10 mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-6xl font-serif font-bold mb-4">Prenotazioni</h1>
-            <p class="text-xl max-w-2xl mx-auto">Riserva il tuo tavolo per un'esperienza culinaria indimenticabile</p>
+    <section class="reservation-header">
+        <div class="reservation-header-overlay"></div>
+        <div class="container reservation-header-content">
+            <h1 class="reservation-header-title">Prenotazioni</h1>
+            <p class="reservation-header-text">Riserva il tuo tavolo per un'esperienza culinaria indimenticabile</p>
         </div>
     </section>
 
     <!-- Reservation Form -->
-    <section class="py-20 bg-dark/90">
-        <div class="container mx-auto px-4 max-w-4xl">
-            <div class="bg-dark/70 rounded-xl shadow-2xl p-8 md:p-12">
-                <h2 class="text-3xl font-serif font-bold mb-8 text-center">Prenota il tuo tavolo</h2>
+    <section class="reservation-form-section">
+        <div class="container reservation-form-container">
+            <div class="reservation-form-wrapper">
+                <h2 class="reservation-form-title">Prenota il tuo tavolo</h2>
                 
-                <form id="reservation-form" class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="name" class="block mb-2 font-medium">Nome completo*</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-dark/80 border border-dark/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                <form id="reservation-form" class="reservation-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nome completo*</label>
+                            <input type="text" id="name" name="name" required class="form-input">
                         </div>
                         
-                        <div>
-                            <label for="email" class="block mb-2 font-medium">Email*</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-dark/80 border border-dark/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email*</label>
+                            <input type="email" id="email" name="email" required class="form-input">
                         </div>
                     </div>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="phone" class="block mb-2 font-medium">Telefono*</label>
-                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 bg-dark/80 border border-dark/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Telefono*</label>
+                            <input type="tel" id="phone" name="phone" required class="form-input">
                         </div>
                         
-                        <div>
-                            <label for="guests" class="block mb-2 font-medium">Numero di ospiti*</label>
-                            <select id="guests" name="guests" required class="w-full px-4 py-3 bg-dark/80 border border-dark/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <div class="form-group">
+                            <label for="guests" class="form-label">Numero di ospiti*</label>
+                            <select id="guests" name="guests" required class="form-input">
                                 <option value="" disabled selected>Seleziona</option>
                                 <option value="1">1 persona</option>
                                 <option value="2">2 persone</option>
@@ -85,15 +74,15 @@
                         </div>
                     </div>
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="date" class="block mb-2 font-medium">Data*</label>
-                            <input type="date" id="date" name="date" required class="w-full px-4 py-3 bg-dark/80 border border-dark/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date" class="form-label">Data*</label>
+                            <input type="date" id="date" name="date" required class="form-input">
                         </div>
                         
-                        <div>
-                            <label for="time" class="block mb-2 font-medium">Orario*</label>
-                            <select id="time" name="time" required class="w-full px-4 py-3 bg-dark/80 border border-dark/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        <div class="form-group">
+                            <label for="time" class="form-label">Orario*</label>
+                            <select id="time" name="time" required class="form-input">
                                 <option value="" disabled selected>Seleziona</option>
                                 <option value="12:00">12:00</option>
                                 <option value="12:30">12:30</option>
@@ -108,18 +97,18 @@
                         </div>
                     </div>
                     
-                    <div>
-                        <label for="special-requests" class="block mb-2 font-medium">Richieste speciali</label>
-                        <textarea id="special-requests" name="special-requests" rows="4" class="w-full px-4 py-3 bg-dark/80 border border-dark/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                    <div class="form-group">
+                        <label for="special-requests" class="form-label">Richieste speciali</label>
+                        <textarea id="special-requests" name="special-requests" rows="4" class="form-input form-textarea"></textarea>
                     </div>
                     
-                    <div class="pt-4">
-                        <button type="submit" class="w-full bg-primary hover:bg-red-600 text-white font-bold py-4 px-6 rounded-lg transition-colors duration-300">
+                    <div class="form-submit">
+                        <button type="submit" class="btn-submit">
                             Conferma prenotazione
                         </button>
                     </div>
                     
-                    <p class="text-sm text-light/60">
+                    <p class="form-note">
                         * Campi obbligatori. Riceverai una conferma via email.
                     </p>
                 </form>
@@ -128,58 +117,70 @@
     </section>
 
     <!-- Reservation Info -->
-    <section class="py-16 bg-primary/10">
-        <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl font-serif font-bold mb-6">Informazioni sulle prenotazioni</h2>
+    <section class="reservation-info">
+        <div class="container">
+            <div class="reservation-info-container">
+                <h2 class="section-title">Informazioni sulle prenotazioni</h2>
                 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                    <div class="bg-dark/70 p-6 rounded-xl">
-                        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i data-feather="clock" class="text-primary w-6 h-6"></i>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i data-feather="clock"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">Orari</h3>
-                        <p class="text-light/80">Lun-Dom: 12:00 - 15:00 / 19:00 - 23:00</p>
+                        <h3 class="info-title">Orari</h3>
+                        <p class="info-text">Lun-Dom: 12:00 - 15:00 / 19:00 - 23:00</p>
                     </div>
                     
-                    <div class="bg-dark/70 p-6 rounded-xl">
-                        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i data-feather="users" class="text-primary w-6 h-6"></i>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i data-feather="users"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">Gruppi</h3>
-                        <p class="text-light/80">Per gruppi superiori a 8 persone, contattaci direttamente</p>
+                        <h3 class="info-title">Gruppi</h3>
+                        <p class="info-text">Per gruppi superiori a 8 persone, contattaci direttamente</p>
                     </div>
                     
-                    <div class="bg-dark/70 p-6 rounded-xl">
-                        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i data-feather="alert-circle" class="text-primary w-6 h-6"></i>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i data-feather="alert-circle"></i>
                         </div>
-                        <h3 class="text-xl font-bold mb-2">Politica</h3>
-                        <p class="text-light/80">Si prega di annullare con almeno 24 ore di anticipo</p>
+                        <h3 class="info-title">Politica</h3>
+                        <p class="info-text">Si prega di annullare con almeno 24 ore di anticipo</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <custom-footer></custom-footer>
 
     <!-- Scripts -->
     <script src="components/navbar.js"></script>
     <script src="components/footer.js"></script>
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
     <script>
         feather.replace();
-        
+
         // Set minimum date to today
         document.getElementById('date').min = new Date().toISOString().split('T')[0];
-        
+
+        // Form validation function (simple version)
+        function validateForm(form) {
+            const inputs = form.querySelectorAll('[required]');
+            for (let input of inputs) {
+                if (!input.value.trim()) {
+                    alert('Per favore compila tutti i campi obbligatori');
+                    return false;
+                }
+            }
+            return true;
+        }
+
         // Handle form submission
         document.getElementById('reservation-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             if(validateForm(this)) {
-                // In a real app, you would send the data to your backend
                 alert('Prenotazione inviata con successo! Riceverai una conferma via email.');
                 this.reset();
             }
